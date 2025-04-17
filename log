@@ -90,3 +90,18 @@ mi., 16 de abr. de 2025 21:28:04:
  tests:  11|2
 total_score: 50/70
 911800e
+mi., 16 de abr. de 2025 21:42:29: 
+ hashmap.c | 15 ++++++++++++++-
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'firstMap':
+hashmap.c:118:24: error: comparison between pointer and integer [-Werror]
+     for (long i = 0; i < map->buckets; i++){
+                        ^
+hashmap.c: In function 'nextMap':
+hashmap.c:129:15: error: comparison between pointer and integer [-Werror]
+     while(aux < map->buckets){
+               ^
+cc1.exe: all warnings being treated as errors
+d9edc8c
