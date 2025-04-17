@@ -95,13 +95,13 @@ Pair * searchMap(HashMap * map,  char * key) {
     Pair * aux = map->buckets[posicion];
     if(aux == NULL) return NULL;
     while(map->buckets[posicion] != NULL && map->buckets[posicion]->key != NULL){
-        if(is_equal(map->buckets[posicion]->key, key)){
-            return map->buckets[posicion];
-        }
-        posicion = (posicion + 1) % map->capacity;
+        if(map->buckets[posicion] == NULL) return NULL;
+            if(is_equal(map->buckets[posicion]->key, key)){
+                return map->buckets[posicion];
+            }
+            posicion = (posicion + 1) % map->capacity;
     }
-    if(map->buckets[posicion] == NULL) return NULL;
-
+    
     return NULL;
 }
 

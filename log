@@ -60,3 +60,9 @@ mi., 16 de abr. de 2025 21:11:28:
  tests:  3|5
 total_score: 20/70
 1028101
+mi., 16 de abr. de 2025 21:12:44: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  3|5
+total_score: 20/70
+41cd814
