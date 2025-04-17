@@ -64,8 +64,18 @@ void insertMap(HashMap * map, char * key, void * value) {
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
+    Pair** aux = map->buckets;
+    long old_capacity = map->capacity;
+    map->capacity *= 2;
 
+    map->buckets = (HashMap*)calloc(map->capacity, sizeof(HashMap));
+    map->size = 0;
 
+    for(long i = 0; i < old_capacity; i++){
+        insertMap(map, aux[i]->key, aux[i]->value);
+        map->size++;
+        map->current = i;
+    }
 }
 
 

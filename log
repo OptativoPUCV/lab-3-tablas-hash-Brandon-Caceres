@@ -111,3 +111,14 @@ mi., 16 de abr. de 2025 21:42:57:
  tests:  16|1
 total_score: 60/70
 ce5a949
+mi., 16 de abr. de 2025 21:53:15: 
+ hashmap.c | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'enlarge':
+hashmap.c:71:18: error: assignment from incompatible pointer type [-Werror=incompatible-pointer-types]
+     map->buckets = (HashMap*)calloc(map->capacity, sizeof(HashMap));
+                  ^
+cc1.exe: all warnings being treated as errors
+819d19a
